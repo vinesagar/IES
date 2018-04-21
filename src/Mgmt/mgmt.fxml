@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="786.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mgmt.MgmtController">
+   <children>
+      <Pane layoutX="88.0" layoutY="493.0" prefHeight="18.0" prefWidth="200.0" style="-fx-background-color: #4b86b4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #4b86b4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="notifBtn" layoutX="43.0" mnemonicParsing="false" onAction="#rootChange" prefHeight="45.0" text="NOTIFICATIONS" textFill="WHITE" />
+            <JFXButton fx:id="mgmtBtn" layoutX="148.0" mnemonicParsing="false" onAction="#rootChange" prefHeight="45.0" text="MANAGEMENT" textFill="WHITE" />
+            <JFXButton fx:id="examBtn" layoutX="258.0" mnemonicParsing="false" onAction="#rootChange" prefHeight="45.0" text="EXAM" textFill="WHITE" />
+            <JFXButton fx:id="homeBtn" layoutX="319.0" mnemonicParsing="false" onAction="#rootChange" prefHeight="45.0" text="HOME" textFill="WHITE" />
+            <ImageView layoutX="13.0" layoutY="11.0">
+               <image>
+                  <Image url="@../Images/icons8_Settings_24px_2.png" />
+               </image>
+            </ImageView>
+            <MenuBar fx:id="mb" layoutX="3.0" layoutY="12.0" opacity="0.0" prefWidth="45.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="options">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#diasplaySetup" text="Setup IES" />
+                        <MenuItem mnemonicParsing="false" text="Minimize" />
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+      <Pane prefHeight="45.0" prefWidth="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="5.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IES">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="mgmtAnchor" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Line endX="100.0" layoutX="101.0" layoutY="29.0" startX="-100.0" />
+            <Text fx:id="choosenExamTXT" layoutX="202.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose an exam first" />
+         </children>
+      </AnchorPane>
+      <Pane layoutY="45.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #63ace5;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <JFXButton layoutY="141.0" onAction="#applicantDetails" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #adcbe3;" text="Applicants" />
+            <JFXButton layoutY="186.0" onAction="#coordinatorsDetails" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #adcbe3;" text="Coordinators" />
+            <JFXButton layoutY="231.0" onAction="#SeatingDetails" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #adcbe3;" text="Rooms" />
+            <JFXComboBox fx:id="choosenExam" onAction="#examChoosed" prefHeight="45.0" prefWidth="200.0" promptText="Choose Exam" />
+            <JFXButton layoutY="96.0" onAction="#centerDetails" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #adcbe3;" text="Centers" />
+            <JFXComboBox fx:id="choosenCenter" layoutY="48.0" onAction="#centerChoosed" prefHeight="45.0" prefWidth="200.0" promptText="Choose Center" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

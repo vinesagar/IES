@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mgmt.Mgmt_ApplicantDetailsController">
+   <children>
+      <JFXTabPane prefHeight="721.0" prefWidth="1500.0">
+         <tabs>
+            <Tab text="Views Applicants Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Roll Number">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchRollNoTF" layoutX="44.0" layoutY="67.0" prefHeight="36.0" prefWidth="270.0" />
+                        <JFXButton layoutX="339.0" layoutY="67.0" onAction="#searchApplicant" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #63ace5;" text="Search" />
+                        <Text layoutX="44.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant's Details">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="44.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number" />
+                        <Text layoutX="44.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room number" />
+                        <Text layoutX="44.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coordinator Name" />
+                        <Text layoutX="44.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" />
+                        <Text layoutX="179.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Doe" />
+                        <Text layoutX="179.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7503116141" />
+                        <Text layoutX="179.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23F" />
+                        <Text layoutX="179.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doe Doe" />
+                        <Text layoutX="179.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZDA" />
+                        <JFXButton layoutX="286.0" layoutY="297.0" onAction="#viewRoom" style="-fx-background-color: #63ace5;" text="View Details" />
+                        <JFXButton layoutX="286.0" layoutY="339.0" onAction="#viewCoordinator" style="-fx-background-color: #63ace5;" text="View Details" />
+                        <JFXButton layoutX="286.0" layoutY="380.0" onAction="#viewCenter" style="-fx-background-color: #63ace5;" text="View Details" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add Applicant">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="44.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter applicant's details">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField layoutX="171.0" layoutY="315.0" />
+                        <JFXTextField layoutX="171.0" layoutY="354.0" />
+                        <JFXComboBox layoutX="171.0" layoutY="395.0" prefWidth="135.0" />
+                        <JFXComboBox layoutX="171.0" layoutY="432.0" prefWidth="135.0" />
+                        <JFXButton layoutX="133.0" layoutY="488.0" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #63ace5;" text="ADD" />
+                        <Text layoutX="44.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="44.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number" />
+                        <Text layoutX="44.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" />
+                        <Text layoutX="44.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room" />
+                        <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Applicants using Excel file">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="373.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Preferable method. Since it is faster for large no. of data)" />
+                        <JFXButton layoutX="44.0" layoutY="70.0" prefHeight="36.0" style="-fx-background-color: #63ace5;" text="Click here to choose excel file" />
+                        <Pane layoutX="44.0" layoutY="119.0" prefHeight="99.0" prefWidth="545.0" style="-fx-background-color: #e7eff6;">
+                           <children>
+                              <TableView layoutX="14.0" layoutY="25.0" prefHeight="50.0" prefWidth="302.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Name" />
+                                  <TableColumn prefWidth="75.0" text="Roll Number" />
+                                    <TableColumn prefWidth="75.0" text="Center" />
+                                    <TableColumn prefWidth="75.0" text="Room" />
+                                </columns>
+                              </TableView>
+                              <Text layoutX="340.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leave center and room blank" />
+                              <Text layoutX="340.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if they are to be alloted by IES" />
+                              <Text layoutX="340.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is an example to show" />
+                              <Text layoutX="340.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="format of excel file" />
+                           </children>
+                        </Pane>
+                        <Text layoutX="253.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Update Applicant">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Roll Number">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchRollNoTF1" layoutX="44.0" layoutY="57.0" prefHeight="36.0" prefWidth="270.0" />
+                        <JFXButton layoutX="352.0" layoutY="57.0" onAction="#searchApplicant" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #63ace5;" text="Search" />
+                        <Text layoutX="44.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant's Details">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="44.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number" />
+                        <Text layoutX="44.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room number" />
+                        <Text layoutX="44.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" />
+                        <JFXTextField layoutX="179.0" layoutY="156.0" />
+                        <JFXTextField layoutX="179.0" layoutY="188.0" />
+                        <JFXComboBox layoutX="179.0" layoutY="219.0" prefHeight="25.0" prefWidth="136.0" />
+                        <JFXComboBox layoutX="179.0" layoutY="248.0" prefHeight="25.0" prefWidth="136.0" />
+                        <JFXButton layoutX="143.0" layoutY="317.0" onAction="#searchApplicant" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #63ace5;" text="UPDATE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete Applicant">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Roll Number">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="44.0" layoutY="67.0" prefHeight="36.0" prefWidth="270.0" />
+                        <JFXButton layoutX="339.0" layoutY="67.0" onAction="#searchApplicant" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: #63ace5;" text="Search" />
+                        <Text layoutX="44.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant's Details">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="44.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number" />
+                        <Text layoutX="44.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room number" />
+                        <Text layoutX="44.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coordinator Name" />
+                        <Text layoutX="44.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" />
+                        <Text layoutX="179.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Doe" />
+                        <Text layoutX="179.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7503116141" />
+                        <Text layoutX="179.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23F" />
+                        <Text layoutX="179.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doe Doe" />
+                        <Text layoutX="179.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZDA" />
+                        <JFXButton layoutX="286.0" layoutY="297.0" onAction="#viewRoom" style="-fx-background-color: #63ace5;" text="View Details" />
+                        <JFXButton layoutX="286.0" layoutY="339.0" onAction="#viewCoordinator" style="-fx-background-color: #63ace5;" text="View Details" />
+                        <JFXButton layoutX="286.0" layoutY="380.0" onAction="#viewCenter" style="-fx-background-color: #63ace5;" text="View Details" />
+                        <Text layoutX="144.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GZD" />
+                        <Pane layoutX="468.0" layoutY="36.0" prefHeight="200.0" prefWidth="374.0" style="-fx-background-color: #e7eff6;">
+                           <children>
+                              <Text layoutX="64.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to delete it?">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton layoutX="64.0" layoutY="103.0" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #63ace5;" text="Yes" />
+                              <JFXButton layoutX="231.0" layoutY="103.0" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #63ace5;" text="No" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setup.Setup_ServerController">
+   <children>
+      <Text fx:id="stat" layoutX="31.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connect to the network so that so that IES can make a server if itself" />
+      <Text fx:id="statTXT" layoutX="31.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting up the server" />
+      <JFXButton fx:id="a" layoutX="31.0" layoutY="124.0" onAction="#goOnline" text="Stop server &amp; Go online" />
+   </children>
+</AnchorPane>

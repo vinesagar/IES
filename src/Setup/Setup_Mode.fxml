@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="786.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setup.Setup_ModeController">
+   <children>
+      <JFXButton layoutX="93.0" layoutY="103.0" onAction="#setOnline" prefHeight="90.0" prefWidth="360.0" text="Online/API">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="93.0" layoutY="256.0" onAction="#setServer" prefHeight="90.0" prefWidth="360.0" text="Own Server">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#home" text="Back Home" />
+      <Separator layoutX="513.0" layoutY="43.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="5.0" />
+      <AnchorPane fx:id="setupAP" layoutX="555.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" />
+      <JFXTextField fx:id="id" layoutX="52.0" layoutY="381.0" promptText="Enter ID" />
+      <JFXButton layoutX="195.0" layoutY="381.0" onAction="#setID" text="SET ID" />
+      <Text fx:id="newTXT" layoutX="562.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <JFXButton layoutX="176.0" layoutY="511.0" onAction="#newBTNFUNC" />
+   </children>
+</AnchorPane>

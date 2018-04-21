@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mgmt.Mgmt_RoomDetailsController">
+   <children>
+      <JFXTabPane layoutX="42.0" layoutY="46.0" prefHeight="379.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="View Room's Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox layoutX="44.0" layoutY="66.0" prefHeight="45.0" prefWidth="200.0" promptText="Choose Center here" />
+                        <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Center:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Details:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Name" />
+                        <Text layoutX="44.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Seats" />
+                        <Text layoutX="45.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pattern" />
+                        <Text fx:id="roomName" layoutX="144.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Krishna Engg College" />
+                        <Text fx:id="noSeats" layoutX="173.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GZD" />
+                        <Text fx:id="pattern" layoutX="173.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="As25DX783wag" />
+                        <Separator layoutX="409.0" layoutY="55.0" orientation="VERTICAL" prefHeight="500.0" style="-fx-background-color: #63ace5;" />
+                        <JFXListView fx:id="roomsLV" layoutX="459.0" layoutY="20.0" prefHeight="586.0" prefWidth="303.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add Room">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="155.0" layoutY="91.0" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #e7eff6;" />
+                        <Text layoutX="50.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Name" />
+                        <Text layoutX="50.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Seats" />
+                        <Text layoutX="49.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Coordinator Details Here:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXButton layoutX="123.0" layoutY="282.0" onAction="#addRoom" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #63ace5;" text="Add Room" />
+                        <JFXTextField layoutX="155.0" layoutY="145.0" />
+                        <Text layoutX="55.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pattern" />
+                        <JFXTextField layoutX="155.0" layoutY="206.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Update Room">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="144.0" layoutY="217.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #e7eff6;" />
+                        <Text layoutX="44.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Name" />
+                        <Text layoutX="44.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Room's Details Here:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXButton layoutX="88.0" layoutY="408.0" onAction="#updateRoom" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #63ace5;" text="Update Room" />
+                        <Text layoutX="44.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Seats" />
+                        <JFXTextField layoutX="144.0" layoutY="272.0" />
+                        <Text layoutX="44.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pattern" />
+                        <JFXTextField layoutX="144.0" layoutY="326.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete Room">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="44.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rooms Details:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="44.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Name" />
+                        <Text layoutX="44.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Seats" />
+                        <Text fx:id="dltRoomName" layoutX="196.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Krishna Engg College" />
+                        <Text fx:id="dltNoSeats" layoutX="195.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GZD" />
+                        <Pane layoutX="44.0" layoutY="315.0" prefHeight="200.0" prefWidth="374.0" style="-fx-background-color: #e7eff6;">
+                           <children>
+                              <Text layoutX="64.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to delete it?">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <JFXButton layoutX="64.0" layoutY="103.0" onAction="#deleteRoom" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #63ace5;" text="Delete" />
+                              <JFXButton layoutX="231.0" layoutY="103.0" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #63ace5;" text="No" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

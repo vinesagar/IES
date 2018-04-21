@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="630.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Exam.Exam_ViewExamsController">
+   <children>
+      <TableView fx:id="examsTV" layoutX="44.0" layoutY="46.0" prefHeight="539.0" prefWidth="525.0">
+        <columns>
+          <TableColumn fx:id="examName" prefWidth="314.0" text="Exam Name" />
+          <TableColumn fx:id="date" prefWidth="110.0" text="Date" />
+            <TableColumn fx:id="time" prefWidth="100.0" text="Time" />
+        </columns>
+      </TableView>
+      <Text layoutX="44.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click on any exam to available options" />
+      <Separator layoutX="630.0" layoutY="31.0" orientation="VERTICAL" prefHeight="552.0" prefWidth="0.0" />
+      <JFXButton layoutX="757.0" layoutY="306.0" onAction="#editExamDetails" text="Edit Exam Details" />
+      <JFXButton layoutX="770.0" layoutY="355.0" onAction="#deleteExam" text="Delete Exam" />
+      <JFXButton layoutX="752.0" layoutY="402.0" onAction="#editQuestionBank" text="Edit Question Bank" />
+      <JFXButton layoutX="748.0" layoutY="447.0" onAction="#editQuesPaper" text="Edit Question Paper" />
+      <Text fx:id="enameTXT" layoutX="765.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="selectExamCB" layoutX="736.0" layoutY="134.0" onAction="#examChoosen" prefWidth="150.0" promptText="Select  Exam" />
+   </children>
+</AnchorPane>

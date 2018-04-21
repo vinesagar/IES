@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="511.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Exam.Exam_CreateQuestionPaperController">
+   <children>
+      <Label layoutX="14.0" layoutY="33.0" text="Instructions" />
+      <JFXTextArea fx:id="instructionsTA" layoutX="14.0" layoutY="50.0" />
+      <ComboBox fx:id="catCB" layoutX="14.0" layoutY="285.0" prefWidth="150.0" promptText="Select Category" />
+      <Label layoutX="14.0" layoutY="256.0" text="Category Details" />
+      <Label layoutX="109.0" layoutY="455.0" text="Total Questions" />
+      <JFXTextField fx:id="quesNumCB" layoutX="179.0" layoutY="285.0" prefHeight="25.0" prefWidth="165.0" promptText="No. of Questions In Category" />
+      <JFXButton layoutX="176.0" layoutY="337.0" onAction="#setQuesNum" text="Set" />
+      <Text fx:id="totalQuesTXT" layoutX="214.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sdfs" />
+      <Separator layoutX="532.0" layoutY="25.0" orientation="VERTICAL" prefHeight="349.0" prefWidth="0.0" />
+      <TableView fx:id="catQTV" layoutX="556.0" layoutY="33.0" prefHeight="343.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="catC" prefWidth="136.0" text="Category" />
+          <TableColumn fx:id="nQC" prefWidth="63.0" text="No. of Q" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="toughnessTF" layoutX="98.0" layoutY="384.0" prefHeight="25.0" prefWidth="45.0" />
+      <Label layoutX="17.0" layoutY="388.0" text="Toughness" />
+      <JFXButton layoutX="14.0" layoutY="451.0" onAction="#doneExam" text="Done" />
+      <Text layoutX="180.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" />
+      <JFXTextField fx:id="durationTF" layoutX="236.0" layoutY="384.0" />
+      <JFXTextField fx:id="markCatTF" layoutX="14.0" layoutY="337.0" promptText="Marks per Question" />
+   </children>
+</AnchorPane>
