@@ -6,15 +6,11 @@
 package project1;
 
 import DB.Sql;
+import Main.MainController;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 /**
  *
@@ -28,13 +24,13 @@ public class Help {
     public static int port;
     static Map<String,Exam> allExams=new HashMap<>();
     public static Boolean updateExam=false;
+    public static Boolean threadStopper=false;
+    public static int t1=0,t2=0;
     
     
     
     
-    
-    
-    
+
     
     
     public static Map<String,Exam> allExams(){
