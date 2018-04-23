@@ -5,7 +5,6 @@
  */
 package DB;
 
-import project1.*;
 import java.sql.*;
 
 /**
@@ -16,9 +15,13 @@ public class Sql {
     public static Connection connector() throws ClassNotFoundException{
     try{
         //Class.forName("org.sqlite.JDBC");
+        //Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+        //Connection c = DriverManager.getConnection("jdbc:derby:IESprimary;create=true");
         Connection c=DriverManager.getConnection("jdbc:derby://localhost:1527/IESprimaryDB", "vinay","vinay");
+            System.out.println("Working Directory = " + System.getProperty("user.dir"));
     return c;
     }
+ 
     catch(SQLException e){return null;}
     
     }
